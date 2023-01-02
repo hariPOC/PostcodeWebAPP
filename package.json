@@ -6,10 +6,11 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "dotenv": "^16.0.3",
     "quick-score": "0.0.5",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-scripts": "^4.0.1",
+    "react-scripts": "^5.0.1",
     "react-search-autocomplete": "^8.1.0",
     "styled-components": "^4.4.1"
   },
@@ -19,7 +20,7 @@
     "test": "jest --verbose --watch-all --coverage",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "npm install && npm run build && cd build && aws s3 sync . s3://postcode-app --region us-east-1"
+    "deploy": "npm install && npm run build && cd build && aws s3 sync . s3://postcode-webapp --region us-east-1"
   },
   "jest": {
     "setupFiles": [

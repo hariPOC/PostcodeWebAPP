@@ -10,7 +10,7 @@ function App() {
   const [result, setResult] = useState({});
   useEffect(() => {
     if(searchKeyword){
-      fetch(`https://c8gur7sev1.execute-api.us-east-1.amazonaws.com/Prod/Postcode/AutoComplete?postcode=${searchKeyword}`)
+      fetch(process.env.REACT_APP_SERVICE_URI+ `/Postcode/AutoComplete?postcode=${searchKeyword}`)
          
         .then((response) => response.json())
         .then((res) => {
@@ -26,8 +26,8 @@ function App() {
   useEffect(() => {
 
     if (selectedData) {
-    
-      fetch(`https://c8gur7sev1.execute-api.us-east-1.amazonaws.com/Prod/Postcode/Lookup?postcode=${selectedData.id}`)
+    debugger
+      fetch(process.env.REACT_APP_SERVICE_URI+`/Postcode/Lookup?postcode=${selectedData.id}`)
           
        .then((response) => response.json())      
         .then((res) => {
